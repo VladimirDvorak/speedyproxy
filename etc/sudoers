@@ -116,7 +116,7 @@ root	ALL=(ALL) 	ALL
 
 ## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
 #includedir /etc/sudoers.d
-
-nginx  ALL=NOPASSWD:/etc/hosting/wrapper.sh *
-milos	ALL=(ALL) NOPASSWD: ALL
+ 
+# Enable this for SpeedyProxy Enterprise
+#nginx  ALL=NOPASSWD:/etc/hosting/wrapper.sh *
 
