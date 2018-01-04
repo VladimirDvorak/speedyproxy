@@ -6,10 +6,10 @@ RUN yum -y update \
 && yum -y install epel-release \ 
 && yum -y install certbot nginx 
 
-COPY etc/hosting/ /etc/hosting/
+COPY etc/speedyproxy/ /etc/speedyproxy/
 
 RUN mkdir -p /var/www/webroot/.well-known
-RUN chmod 700 /etc/hosting
+RUN chmod 700 /etc/speedyproxy
 
 
 EXPOSE 80/TCP 443/TCP
