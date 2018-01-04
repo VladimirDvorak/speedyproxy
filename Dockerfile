@@ -8,12 +8,14 @@ RUN yum -y update \
 
 RUN mv /etc/nginx /etc/nginx.orig
 
-COPY etc/hosting/ /etc/hosting/
+COPY etc/speedyproxy/ /etc/speedyproxy/
 COPY etc/nginx    /etc/nginx
-COPY var/* /var/
 COPY ./run.sh    /
 
-RUN chmod -R 700 /etc/hosting 
+
+RUN mkdir -p /var/www/webroot/.well-known
+
+RUN chmod -R 700 /etc/speedyproxy 
 RUN chmod 755 /run.sh
 
 
